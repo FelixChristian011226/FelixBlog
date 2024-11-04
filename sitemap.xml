@@ -2,7 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2024/09/29/mujoco%20notes/</loc>
+    <loc>http://example.com/2024/10/30/NERFvs3DGS/</loc>
+    
+    <lastmod>2024-11-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2024/09/29/mujoco_notes/</loc>
+    
+    <lastmod>2024-11-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2024/09/29/CoACD_notes/</loc>
     
     <lastmod>2024-11-04</lastmod>
     
@@ -12,24 +30,6 @@
   
   <url>
     <loc>http://example.com/2024/09/26/hfield/</loc>
-    
-    <lastmod>2024-11-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2024/09/29/CoACD%20notes/</loc>
-    
-    <lastmod>2024-11-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2024/10/30/NERFvs3DGS/</loc>
     
     <lastmod>2024-11-04</lastmod>
     
@@ -56,6 +56,15 @@
   </url>
   
   <url>
+    <loc>http://example.com/tags/index.html</loc>
+    
+    <lastmod>2024-11-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/links/index.html</loc>
     
     <lastmod>2024-11-04</lastmod>
@@ -66,15 +75,6 @@
   
   <url>
     <loc>http://example.com/repository/index.html</loc>
-    
-    <lastmod>2024-11-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/index.html</loc>
     
     <lastmod>2024-11-04</lastmod>
     
@@ -131,20 +131,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/hfield/</loc>
-    <lastmod>2024-11-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/collision/</loc>
-    <lastmod>2024-11-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/tags/NeRF/</loc>
     <lastmod>2024-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -153,6 +139,20 @@
   
   <url>
     <loc>http://example.com/tags/3DGS/</loc>
+    <lastmod>2024-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/hfield/</loc>
+    <lastmod>2024-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/collision/</loc>
     <lastmod>2024-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
