@@ -17,18 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>友情链接 | Hexo</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="友情链接">
-<meta property="og:url" content="http://example.com/links/index.html">
+  <title>mujoco notes | Hexo</title>
+  <meta name="description" content="CollisionComputation - MuJoCo Documentation  We have chosen to limit collision detection to convex geoms. All primitive types are convex. Height fields are not convex but internally they are treated a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mujoco notes">
+<meta property="og:url" content="http://example.com/2024/11/04/mujoco%20notes/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="CollisionComputation - MuJoCo Documentation  We have chosen to limit collision detection to convex geoms. All primitive types are convex. Height fields are not convex but internally they are treated a">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-11-04T10:23:13.909Z">
-<meta property="article:modified_time" content="2024-11-04T10:23:13.909Z">
+<meta property="article:published_time" content="2024-11-04T13:11:37.164Z">
+<meta property="article:modified_time" content="2024-11-04T13:13:20.859Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="mujoco collision">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://example.com/links/index.html">
+  <link rel="canonical" href="http://example.com/2024/11/04/mujoco%20notes/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -47,7 +50,7 @@
 <meta name="generator" content="Hexo 7.3.0"></head>
 
 
-<body class="main-center theme-black no-sidebar" itemscope itemtype="http://schema.org/WebPage">
+<body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage">
   <header class="header" itemscope itemtype="http://schema.org/WPHeader">
   <div class="slimContent">
     <div class="navbar-header">
@@ -283,22 +286,103 @@
 </aside>
 
   
-  <main class="main" role="main">
-  <article class="article article-links article-type-list" itemscope="">
-  <header class="article-header">
-    <h1 itemprop="title">友情链接</h1>
-    <p class="text-muted">
-      欢迎交换链接，可在当前页面留言
-    </p>
-  </header>
-  <div class="article-body">
-    <div class="row">
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-mujoco notes" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      mujoco notes
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2024/11/04/mujoco%20notes/" class="article-date">
+	  <time datetime="2024-11-04T13:11:37.164Z" itemprop="datePublished">2024-11-04</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/mujoco/">mujoco</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/mujoco-collision/" rel="tag">mujoco collision</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2024/11/04/mujoco%20notes/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h2 id="Collision"><a href="#Collision" class="headerlink" title="Collision"></a>Collision</h2><p><a target="_blank" rel="noopener" href="https://mujoco.readthedocs.io/en/stable/computation/index.html#collision">Computation - MuJoCo Documentation</a></p>
+<blockquote>
+<p>We have chosen to limit collision detection to <em>convex</em> geoms. All primitive types are convex. Height fields are not convex but internally they are treated as unions of triangular prisms (using custom collision pruning beyond the filters described above). Meshes specified by the user can be non-convex, and are rendered as such. For collision purposes however they are replaced with their convex hulls.</p>
+</blockquote>
+<ul>
+<li>碰撞检测限制在<em>凸</em>几何体</li>
+<li>所有原始类型都是凸的</li>
+<li>高度字段不是凸的，但在内部它们被视为三棱柱的并集</li>
+<li>网格可以是非凸的，并且如此渲染。然而，出于碰撞目的，它们被替换为凸包</li>
+</ul>
+<blockquote>
+<p>In order to model a non-convex object other than a height field, the user must decompose it into a union of convex geoms (which can be primitive shapes or meshes) and attach them to the same body. Open tools like the <a target="_blank" rel="noopener" href="https://github.com/SarahWeiii/CoACD">CoACD library</a> can be used outside MuJoCo to automate this process. Finally, all built-in collision functions can be replaced with custom callbacks. This can be used to incorporate a general-purpose “triangle soup” collision detector for example. However we do not recommend such an approach. Pre-processing the geometry and representing it as a union of convex geoms takes some work, but it pays off at runtime and yields both faster and more stable simulation.</p>
+<p>为了对高度场以外的非凸对象进行建模，用户必须将其分解为凸几何体（可以是原始形状或网格）的并集并将它们附加到同一实体。可以在 MuJoCo 外部使用<a target="_blank" rel="noopener" href="https://github.com/SarahWeiii/CoACD">CoACD 库</a>等开放工具来自动化此过程。最后，所有内置碰撞函数都可以替换为自定义回调。例如，这可用于合并通用“三角汤”碰撞检测器。但是我们不推荐这种方法。预处理几何体并将其表示为凸几何体的联合需要一些工作，但它在运行时得到回报，并产生更快、更稳定的模拟。</p>
+</blockquote>
+
       
     </div>
-  </div>
-</article>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/2024/11/04/mujoco%20notes/" title="mujoco notes" target="_blank" rel="external">http://example.com/2024/11/04/mujoco notes/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
 
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/FelixChristian011226" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/FelixChristian011226" target="_blank"><span class="text-dark">FelixChristian</span><small class="ml-1x">Student</small></a></h3>
+        <div>I&#39;m a student from ZJU, majoring in Computer Science and Technology. Trying to learn more.</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
   
+    
   <section id="comments">
   	
            
@@ -306,6 +390,32 @@
   </section>
 
 
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/2024/11/04/hello-world/" title="Hello World"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
 
 
 </main>
@@ -360,6 +470,10 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+
+
+   
 
 
 
