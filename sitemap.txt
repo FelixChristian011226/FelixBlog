@@ -1,13 +1,12 @@
-http://felix.fra1.zeabur.app/books/index.html
 http://felix.fra1.zeabur.app/2024/10/30/NERFvs3DGS/
 http://felix.fra1.zeabur.app/2024/09/29/mujoco_notes/
 http://felix.fra1.zeabur.app/2024/09/29/CoACD_notes/
 http://felix.fra1.zeabur.app/2024/09/26/hfield/
 http://felix.fra1.zeabur.app/about/index.html
 http://felix.fra1.zeabur.app/categories/index.html
-http://felix.fra1.zeabur.app/links/index.html
-http://felix.fra1.zeabur.app/tags/index.html
 http://felix.fra1.zeabur.app/repository/index.html
+http://felix.fra1.zeabur.app/tags/index.html
+http://felix.fra1.zeabur.app/links/index.html
 http://felix.fra1.zeabur.app/404.html
 http://felix.fra1.zeabur.app/
 http://felix.fra1.zeabur.app/tags/mujoco/
